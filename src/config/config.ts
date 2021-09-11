@@ -1,7 +1,7 @@
 import { Config } from "../type/config";
 
 const defaultConfig: Config = {
-  API_BASE_URL: "http://localhost:3000"
+  API_BASE_URL: "http://localhost:3001"
 }
 
 const config: Config = {

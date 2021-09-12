@@ -19,7 +19,8 @@ export enum AstronautsDialogTranslations {
   LABEL_BIRTHDATE = "Birthdate",
   LABEL_SUPERPOWER = "Superpower",
   LABEL_CREATED_AT = "Created",
-  LABEL_UPDATED_AT = "Last update"
+  LABEL_UPDATED_AT = "Last update",
+  BUTTON_SUBMIT = "Submit"
 };
 
 /** Basic validation translatios that are usually shared through all validations */

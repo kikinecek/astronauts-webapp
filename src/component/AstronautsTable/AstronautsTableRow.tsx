@@ -28,6 +28,8 @@ const useStyles = makeStyles({
  * Incudes update/delete buttons.
  * !!! All parameters are passed inside the object (so there is technically only 1 parameter)
  * @param astronaut is passed inside the object. Contains astronaut's data for the row.
+ * @param onUpdateAstronaut is function that is triggered when updateAstronaut button is clicked
+ * @param onDeleteAstronaut is function that is treggered when deleteAstronaut button is clicked
  * @returns table row
  */
 const AstronautsTableRow = ({

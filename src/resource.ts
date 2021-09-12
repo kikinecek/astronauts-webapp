@@ -1,5 +1,6 @@
 import { AxiosResponse } from "axios";
 import axios from "axios";
+import config from "./config";
 import {
   Astronaut,
   AstronautSerialized,
@@ -20,15 +21,11 @@ class HttpResource {
     // const astronauts: AxiosResponse<AstronautSerialized[]> = await AxiosInstance.get<AstronautSerialized[]>("astronauts/");
     const astronauts: AxiosResponse<AstronautSerialized[]> = await axios.request<AstronautSerialized[]>({
       method: "GET",
-      url: "http://localhost:3001/astronauts",
+      url: `${config.API_BASE_URL}/astronauts`
 
     })
 
     return astronauts.data.map(transformAstronautSerializedToDeserialized);
-  }
-
-  public static async getAstronautById() {
-
   }
 
   /**
@@ -38,7 +35,7 @@ class HttpResource {
   public static async createAstronaut(astronaut: AstronautForm): Promise<void> {
     await axios.request({
       method: "POST",
-      url: "http://localhost:3001/astronauts",
+      url: `${config.API_BASE_URL}/astronauts`,
       data: astronaut
     })
   }
@@ -51,7 +48,7 @@ class HttpResource {
   public static async updateAstronaut(astronautId: number, astronaut: AstronautForm) {
     await axios.request({
       method: "PUT",
-      url: `http://localhost:3001/astronauts/${astronautId}`,
+      url: `${config.API_BASE_URL}/astronauts/${astronautId}`,
       data: astronaut
     })
   }
@@ -63,7 +60,7 @@ class HttpResource {
   public static async deleteAstronaut(astronautId: number): Promise<void> {
     await axios.request({
       method: "DELETE",
-      url: `http://localhost:3001/astronauts/${astronautId}`
+      url: `${config.API_BASE_URL}/astronauts/${astronautId}`,
     });
   }
 }

@@ -90,7 +90,6 @@ const AstronautsTableContainer = (
    * @param newPage is new page number
    */
      const onPageChange = (event: unknown, newPage: number): void => {
-      console.log(tablePaginationOptions);
       setTablePaginationOptions({
         ...tablePaginationOptions,
         page: newPage

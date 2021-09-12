@@ -189,7 +189,7 @@ const AstronautsDialog = ({
                           </Grid>
                         ) : null
                       }
-                      <Button onClick={submitForm} disabled={isSubmitting}>{"Submit"}</Button>
+                      <Button onClick={submitForm} disabled={isSubmitting}>{AstronautsDialogTranslations.BUTTON_SUBMIT}</Button>
                     </Grid>
                   </form>
                 </DialogContent>
